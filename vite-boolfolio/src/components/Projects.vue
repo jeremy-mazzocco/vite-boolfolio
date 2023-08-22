@@ -1,12 +1,13 @@
 <script>
 import { ref } from 'vue';
 import axios from 'axios';
+import ProjectCard from './ProjectCard.vue';
 
 export default {
     name: 'Projects',
     data: function () {
         return {
-            projectes: [],
+            projects: [],
 
         }
     },
@@ -30,7 +31,7 @@ export default {
         Projects List
     </h1>
     <div>
-
+        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 </template>
 
