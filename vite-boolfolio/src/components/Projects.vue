@@ -35,7 +35,7 @@ export default {
     // },
     mounted() {
 
-        axios.get('http://localhost:8000/api/v1/projectsApi')
+        axios.get('http://localhost/api/v1/projectsList')
             .then(response => {
                 console.log(reponse.data);
             })
