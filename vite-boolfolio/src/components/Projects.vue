@@ -4,7 +4,10 @@ import axios from 'axios';
 import ProjectCard from './ProjectCard.vue';
 
 export default {
-    name: 'Pippo',
+    name: 'Projects',
+    components: {
+        ProjectCard
+    },
     data: function () {
         return {
             projects: [],

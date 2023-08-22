@@ -12,9 +12,22 @@ export default {
 </script>
 
 <template>
-    <div>
-        {{ project.name }}
+    <div class="card">
+        <div>
+            {{ project.name }}
+        </div>
+        <div>
+            {{ project.title }}
+        </div>
+        <div>
+            {{ project.collaborators }}
+        </div>
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.card {
+    display: flex;
+    width: 33%;
+}
+</style>

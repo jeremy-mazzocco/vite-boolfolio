@@ -1,9 +1,16 @@
 <script>
-import Pippo from './components/Pippo.vue'
+import Projects from './components/Projects.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Projects
+  }
+}
 </script>
 
 <template>
-  <Pippo />
+  <Projects />
 </template>
 
 <style scoped></style>
