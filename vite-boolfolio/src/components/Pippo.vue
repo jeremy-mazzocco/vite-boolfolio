@@ -4,7 +4,7 @@ import axios from 'axios';
 import ProjectCard from './ProjectCard.vue';
 
 export default {
-    name: 'Projects',
+    name: 'Pippo',
     data: function () {
         return {
             projects: [],
@@ -12,7 +12,6 @@ export default {
         }
     },
     mounted() {
-
         axios.get('http://localhost:8000/api/v1/projects-list')
             .then(response => {
 

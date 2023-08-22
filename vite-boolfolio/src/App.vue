@@ -1,9 +1,9 @@
 <script>
-import Projects from './components/Projects.vue'
+import Pippo from './components/Pippo.vue'
 </script>
 
 <template>
-  <Projects />
+  <Pippo />
 </template>
 
 <style scoped></style>
