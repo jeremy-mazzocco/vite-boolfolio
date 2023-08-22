@@ -3,8 +3,9 @@
 export default {
     name: 'ProjectCard',
     props: {
-        type: Object,
-        required: true
+        project: {
+            type: Object
+        }
     }
 
 }
@@ -14,20 +15,30 @@ export default {
 <template>
     <div class="card">
         <div>
-            {{ project.name }}
+            <span>Name project:</span> {{ project.name }}
         </div>
         <div>
-            {{ project.title }}
+            <span>Title:</span> {{ project.title }}
         </div>
         <div>
-            {{ project.collaborators }}
+            <span>Collaborators:</span> {{ project.collaborators }}
         </div>
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .card {
-    display: flex;
-    width: 33%;
+    display: inline-block;
+    width: calc(100% / 4 - 10px);
+    border: 2px solid greenyellow;
+    margin: 10px;
+
+    div {
+        margin: 3px;
+
+        span {
+            font-weight: bold;
+        }
+    }
 }
 </style>

@@ -32,9 +32,13 @@ export default {
     <h1>
         Projects List
     </h1>
-    <div>
+    <div class="container">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.container {
+    text-align: center;
+}
+</style>
