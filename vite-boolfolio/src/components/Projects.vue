@@ -33,7 +33,7 @@ export default {
         Projects List
     </h1>
     <div class="container">
-        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+        <ProjectCard v-for="project in projects" :key="project.id" :project="project" @click="showProject(project.id)" />
     </div>
 </template>
 
