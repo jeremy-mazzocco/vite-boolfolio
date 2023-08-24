@@ -1,7 +1,7 @@
 <script>
 import { ref } from 'vue';
 import axios from 'axios';
-import ProjectCard from './ProjectCard.vue';
+import ProjectCard from '../components/ProjectCard.vue';
 
 const apiURL = 'http://localhost:8000/api/v1'
 
@@ -14,7 +14,6 @@ export default {
         return {
             projects: [],
             pages: [],
-
         }
     },
     methods: {
@@ -47,12 +46,10 @@ export default {
 </script>
 
 <template>
-    <h1>
-        Projects List
-    </h1>
     <div class="container">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
+
     <div class="pages">
         <div v-for="(page, index) in pages" v-html="page.label" @click="changePage(page.url)">
 
