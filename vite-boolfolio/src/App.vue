@@ -1,16 +1,17 @@
 <script>
-import Projects from './components/Projects.vue';
+import AppHome from './components/AppHome.vue';
 
 export default {
   name: 'App',
   components: {
-    Projects
+    AppHome
   }
 }
 </script>
 
 <template>
-  <Projects />
+  <AppHome />
+  <!-- <router-view></router-view> -->
 </template>
 
 <style scoped></style>

@@ -7,7 +7,6 @@ export default {
             type: Object
         }
     }
-
 }
 
 </script>
@@ -22,6 +21,9 @@ export default {
         </div>
         <div>
             <span>Collaborators:</span> {{ project.collaborators }}
+        </div>
+        <div>
+            <span>Finished:</span> {{ project.date_finished }}
         </div>
     </div>
 </template>
