@@ -1,6 +1,4 @@
 <script>
-import axios from 'axios';
-
 
 export default {
     name: 'ProjectCard',
@@ -11,7 +9,7 @@ export default {
     },
     methods: {
         showProjet(id) {
-            this.$router.push
+            this.$router.push('/projects/' + id);
         }
     }
 }
