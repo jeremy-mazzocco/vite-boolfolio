@@ -11,7 +11,8 @@ export default {
         showProjet(id) {
             this.$router.push('/projects/' + id);
         }
-    }
+    },
+    
 }
 
 </script>
