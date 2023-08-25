@@ -1,9 +1,8 @@
 <script>
-import { ref } from 'vue';
 import axios from 'axios';
 import ProjectCard from '../components/ProjectCard.vue';
 
-const apiURL = 'http://localhost:8000/api/v1'
+const apiURL = 'http://localhost:8000/api/v1';
 
 export default {
     name: 'Projects',
@@ -60,6 +59,7 @@ export default {
 <style lang="scss" scoped>
 .container {
     text-align: center;
+
 }
 
 .pages {
@@ -77,6 +77,10 @@ export default {
         line-height: 50px;
         background-color: greenyellow;
         border-radius: 50px;
+    }
+
+    div:hover {
+        cursor: pointer;
     }
 }
 </style>

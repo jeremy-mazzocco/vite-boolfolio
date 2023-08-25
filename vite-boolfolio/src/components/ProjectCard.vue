@@ -1,10 +1,17 @@
 <script>
+import axios from 'axios';
+
 
 export default {
     name: 'ProjectCard',
     props: {
         project: {
             type: Object
+        }
+    },
+    methods: {
+        showProjet(id) {
+            this.$router.push
         }
     }
 }
@@ -25,6 +32,7 @@ export default {
         <div>
             <span>Finished:</span> {{ project.date_finished }}
         </div>
+        <button @click="showProjet(project.id)">Details</button>
     </div>
 </template>
 
@@ -41,6 +49,19 @@ export default {
         span {
             font-weight: bold;
         }
+    }
+
+    button {
+        background-color: greenyellow;
+        border-radius: 20px;
+        border: none;
+        padding: 5px;
+        width: 4rem;
+        margin: 10px 0px;
+    }
+
+    button:hover {
+        cursor: pointer;
     }
 }
 </style>
