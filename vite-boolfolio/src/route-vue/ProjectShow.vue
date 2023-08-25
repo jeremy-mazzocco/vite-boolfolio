@@ -14,8 +14,8 @@ export default {
         toHome() {
             this.$router.push('/');
         }
-        ,
-        show() {
+    },
+    mounted() {
             axios.get(apiURL + '/project/' + this.$route.params.id)
                 .then(response => {
 
@@ -26,47 +26,65 @@ export default {
                 .catch(error => {
                     console.log(error);
                 });
-        }
-    },
-    // mounted() {
-
-    // }
+    }
 }
 
 </script>
 
 <template>
-    <div>
-        <span>Name project: </span> {{ project.name }}
+    <div class="container">
+        <div>
+            <span class="title">Name project: </span> {{ project.name }}
+        </div>
+        <div>
+            <span class="title">Title: </span> {{ project.title }}
+        </div>
+        <div>
+            <span class="title">Collaborators: </span> {{ project.collaborators }}
+        </div>
+        <div>
+            <span class="title">Finished: </span> {{ project.date_finished }}
+        </div>
+        <div>
+            <span class="title">Used Technologies: </span><span v-for="technology in project.technologies">{{
+                technology.languages
+            }}, </span>
+        </div>
+        <div>
+            <span class="title">Type: </span> {{ project.type.stack }}
+        </div>
+        <button @click="toHome()">Home</button>
     </div>
-    <div>
-        <span>Title: </span> {{ project.title }}
-    </div>
-    <div>
-        <span>Collaborators: </span> {{ project.collaborators }}
-    </div>
-    <div>
-        <span>Finished: </span> {{ project.date_finished }}
-    </div>
-    <div>
-        <span>Used Technologies: </span><span v-for="technology in project.technologies">{{ technology.languages
-        }}, </span>
-    </div>
-    <button @click="show()">Show</button>
-    <button @click="toHome()">Home</button>
 </template>
 
 <style lang="scss" scoped>
-button {
-    background-color: greenyellow;
-    border-radius: 20px;
-    border: none;
-    padding: 5px;
-    width: 4rem;
-    margin: 10px 0px;
-}
+.container {
 
-button:hover {
-    cursor: pointer;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+
+    div {
+        margin: 10px 0px;
+
+        .title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+
+    button {
+        background-color: greenyellow;
+        border-radius: 20px;
+        border: none;
+        padding: 5px;
+        width: 4rem;
+        margin: 10px 10px;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
 }
 </style>
