@@ -46,7 +46,8 @@ export default {
             <span class="title">Finished: </span> {{ project.date_finished }}
         </div>
         <div>
-            <span class="title">Used Technologies: </span><span v-for="technology in project.technologies">{{
+            <span class="title">Used Technologies: </span>
+            <span v-for="technology in project.technologies">{{
                 technology.languages
             }}, </span>
         </div>

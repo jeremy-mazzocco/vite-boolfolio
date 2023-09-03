@@ -1,6 +1,6 @@
 <script>
 import axios from 'axios';
-import ProjectCard from '../components/ProjectCard.vue';
+import ProjectCard from '../components/projectcard.vue';
 
 const apiURL = 'http://localhost:8000/api/v1';
 
@@ -22,11 +22,12 @@ export default {
 
                     this.projects = response.data.projects.data;
                     this.pages = response.data.projects.links;
-                    console.log(response.data.projects);
+                    console.log(response.data.projects, this.pages);
                 })
                 .catch(error => {
                     console.log(error);
                 });
+               
         }
     },
     mounted() {
